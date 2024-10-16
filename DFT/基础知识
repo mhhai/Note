@@ -1,2 +1,3 @@
 1.不论是atpg，bs还是mtr都是为了测试电路是否存在缺陷，区别是其测试的对象不同。
 2.带SCAN的reg，相当于加了SDI和SE两个pin，以及一个mux。
+3.看起来Boundary Scan
