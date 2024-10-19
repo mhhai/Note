@@ -1,1 +1,1 @@
-
+1.core内部的cache和ahb cache是不一样的。ahb cache和ahb协议息息相关。
