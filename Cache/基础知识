@@ -1,4 +1,5 @@
 1.core内部的cache和ahb cache是不一样的。ahb cache和ahb协议息息相关。
 2.Cache本质就是一个硬件hash表（Tag RAM）+SRAM(DATA RAM)，一般来说Cache的大小指的是DATA RAM的数据规模，并不包括Tag RAM的物理空间。
 3.所谓8路组相连（ 8-way set associative）的含义是指，每个组里面有8个行(即8个cacheline)。对于每个组有相同的地址，还是每个way的地址是唯一的。目前看起来保存的是组中way的地址。
-4.way与tag没有关系，way是cache data ram的划分。但是way最好也要在CAM中体现。一个cacheline包含一个tag。way是组更为精细的用法。
+4.cache data sram size = number of way * bytes per way.
+
