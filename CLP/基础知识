@@ -2,3 +2,8 @@
 2.CROSSING_OFF_TO_ON_ISO: Isolation cell fails OFF to ON check.
   CROSSING_OFF_TO_ON_LSH: Level shifter cell fails OFF to ON check.
   CROSSING_OFF_TO_ON_NOLP: Invalid OFF to ON crossing. May miss ISO or LS.
+  1801_LSH_NO_STRATEGY_LH_PATH_LSH:Level shifter strategy is not specified for low-to-high power or high-to-low ground state crossing, on a path that contains a level shifter cell.
+  1801_LSH_NO_STRATEGY_HL_PATH_LSH:Level shifter strategy is not specified for high-to-low power or low-to-high ground state crossing, on a path that contains a level shifter cell.
+  1801_LSH_NO_STRATEGY_LH_PATH_NOLSH:Level shifter strategy is not specified for low-to-high power or high-to-low ground state crossing, on a path that does not contain any level shifter cell.
+
+  
