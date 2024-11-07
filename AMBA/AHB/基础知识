@@ -1,2 +1,1 @@
-1.stall的概念：它是停止运转的意思，发生在当cpu执行时，所需要的数据却不在寄存器或cache中，需要去装载内存的数据，这期间有一个等待，这里叫做stall。
-  这个时间大概是several hundred clock cycles。
+1.stall的概念：它是停止运转的意思，发生在当cpu执行时，所需要的数据却不在寄存器或cache中，需要去装载内存的数据，这期间有一个等待，这里叫做stall。这个时间大概是several hundred clock cycles。
