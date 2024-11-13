@@ -12,5 +12,6 @@
 5.MBIST需要复用IO作为JTAG的通道来控制MBSIT Ctrl。BSCAN是用于测试所有IO电气功能是否正常，通常也是需要复用IO作为JTAG通道控制BSCAN CTRL。MBSIT Ctrl和BSCAN ctrl一般是工具生成的。
 6.在tessent软件插入memory bist和boundary scan都可以在rtl级进行，且这样的流程可以让DC综合优化更加方便和简化，即综合的迭代次数更少。但插入memory bist和boundary scan也可以在综合后的netlist进行，然后insert scan chain，因为insert scan 
   chain必须在netlist进行，综合后才会映射到带有scan的D触发器，且insert scan chain的软件DFT compiler集成在Design Compiler中，方便insert scan chain后的再综合。
-
+7.The boundary-scan test architecture provides a means to test interconnects between integrated circuits on a board without using physical test probes. It adds a boundary-scan cell that includes a multiplexer and latches
+  to each pin on the device. 
 
