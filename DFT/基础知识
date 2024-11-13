@@ -9,5 +9,6 @@
   交由TAP控制器控制。TAP控制器按照 IEEE1149.1 规范通过5个I/O 串行与外界通讯。虽然Boundary Scan是为了解决板级芯片互联的测试而设计的，但是也可以用来进行芯片自身 I/O 的测试，比如 VIH/VIL, VOH/VOL,  highz, I/O漏电等等的测试，IEEE1149.1 
   规范比较实用于纯数字电路的I/O测试，后来为了解决一些高速差分接口的测试，增加了IEEE1149.6 规范，通过在原有协议的基础上增加了两条指令pulse 和transition 来测试差分信号。关于Boundary Scan的部分，三家EDA公司的DFT tool的manual都有详细的介
   绍，关于1149.6 AC jtag的部分，大部分的串行接口IP都会支持，可以找相关部分参考研究。关于 AC jtag部分，由于在芯片设计和板级设计上都有一些特殊考虑，挑战会较大一些。
+5.MBIST需要复用IO作为JTAG的通道来控制MBSIT Ctrl。BSCAN是用于测试所有IO电气功能是否正常，通常也是需要复用IO作为JTAG通道控制BSCAN CTRL。MBSIT Ctrl和BSCAN ctrl一般是工具生成的。
 
 
