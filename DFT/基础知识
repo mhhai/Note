@@ -10,5 +10,7 @@
   规范比较实用于纯数字电路的I/O测试，后来为了解决一些高速差分接口的测试，增加了IEEE1149.6 规范，通过在原有协议的基础上增加了两条指令pulse 和transition 来测试差分信号。关于Boundary Scan的部分，三家EDA公司的DFT tool的manual都有详细的介
   绍，关于1149.6 AC jtag的部分，大部分的串行接口IP都会支持，可以找相关部分参考研究。关于 AC jtag部分，由于在芯片设计和板级设计上都有一些特殊考虑，挑战会较大一些。
 5.MBIST需要复用IO作为JTAG的通道来控制MBSIT Ctrl。BSCAN是用于测试所有IO电气功能是否正常，通常也是需要复用IO作为JTAG通道控制BSCAN CTRL。MBSIT Ctrl和BSCAN ctrl一般是工具生成的。
+6.在tessent软件插入memory bist和boundary scan都可以在rtl级进行，且这样的流程可以让DC综合优化更加方便和简化，即综合的迭代次数更少。但插入memory bist和boundary scan也可以在综合后的netlist进行，然后insert scan chain，因为insert scan 
+  chain必须在netlist进行，综合后才会映射到带有scan的D触发器，且insert scan chain的软件DFT compiler集成在Design Compiler中，方便insert scan chain后的再综合。
 
 
