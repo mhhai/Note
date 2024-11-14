@@ -14,4 +14,6 @@
   chain必须在netlist进行，综合后才会映射到带有scan的D触发器，且insert scan chain的软件DFT compiler集成在Design Compiler中，方便insert scan chain后的再综合。
 7.The boundary-scan test architecture provides a means to test interconnects between integrated circuits on a board without using physical test probes. It adds a boundary-scan cell that includes a multiplexer and latches
   to each pin on the device. 
+8.DC指的是慢速测试，频率几十兆或几兆，测的是固定故障SAF；AC指的是实速测试，高频测试，测的是跳变故障或路径延时故障。两者相同的地方，shift时都按照低频来；不同之处在于capture过程，DC用的低频，AC用的高频，并且频率跟实际芯片功能频率相同，所以名字
+  叫实速测试。
 
