@@ -1,1 +1,13 @@
+1.CDC/RDC
+  1.1.Clock can’t be mux_select, because: 
+    a.date-inputs of MUX may also come from DFF.
+    b.clk switch will cause mux and reg transition at the time, and they comb in the follow logic.
+  1.2.async reset no sync:
+    issue: tx reset release, rx reg metastable. tx_reg.Q->rx_reg.R
+    a.add rdc sync.
+  1.3.rdc_areset
+    issue: tx reset assert, rx reg metastable. tx_reg.Q->rx_reg.D.
+    solution: add cdc sync.
 
+2.Write mmmc_config file:
+  a.
