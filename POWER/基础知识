@@ -11,5 +11,5 @@ CLP
       a. Let high level signal through Always On domain, then connect it to OFF domain.
 3.A supply net need connect to supply src and supply dst.
 4.1801_SUPPLY_CSN_MISSING_FOR_MACRO: Macro cell supply pin does not have a connection specified explicitly in the power intent.
-  a.internal power: use scope net
+  a.internal power: use current scope net.
   b.external power: use set_quivalent -nets, through pad.
