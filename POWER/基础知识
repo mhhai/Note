@@ -1,1 +1,12 @@
-
+1.If you didn’t change the default rule set, tool will automatically adjust the rule check. If the rule is not applicable for the current design, tool will not run it. 
+2.CROSSING_OFF_TO_ON_ISO: Isolation cell fails OFF to ON check.
+  CROSSING_OFF_TO_ON_LSH: Level shifter cell fails OFF to ON check.
+  CROSSING_OFF_TO_ON_NOLP: Invalid OFF to ON crossing. May miss ISO or LS.
+  CROSSING_VOLTAGE_CONFLICT_NOLSH:Signal driver and receiver have incompatible voltages.
+      a.Check both L->H an H->L.
+  1801_LSH_NO_STRATEGY_LH_PATH_LSH:Level shifter strategy is not specified for low-to-high power or high-to-low ground state crossing, on a path that contains a level shifter cell.
+  1801_LSH_NO_STRATEGY_HL_PATH_LSH:Level shifter strategy is not specified for high-to-low power or low-to-high ground state crossing, on a path that contains a level shifter cell.
+  1801_LSH_NO_STRATEGY_LH/HL_PATH_NOLSH:Level shifter strategy is not specified for low-to-high power or high-to-low ground state crossing, on a path that does not contain any level shifter cell.
+      a. Let high level signal through Always On domain, then connect it to OFF domain.
+3.A supply net need connect to supply src and supply dst.
+4.1801_SUPPLY_CSN_MISSING_FOR_MACRO: Macro cell supply pin does not have a connection specified explicitly in the power intent
