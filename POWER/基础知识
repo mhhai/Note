@@ -1,3 +1,4 @@
+CLP
 1.If you didn’t change the default rule set, tool will automatically adjust the rule check. If the rule is not applicable for the current design, tool will not run it. 
 2.CROSSING_OFF_TO_ON_ISO: Isolation cell fails OFF to ON check.
   CROSSING_OFF_TO_ON_LSH: Level shifter cell fails OFF to ON check.
