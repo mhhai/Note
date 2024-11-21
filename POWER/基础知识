@@ -1,4 +1,4 @@
-CLP
+CLP:
 1.If you didn’t change the default rule set, tool will automatically adjust the rule check. If the rule is not applicable for the current design, tool will not run it. 
 2.CROSSING_OFF_TO_ON_ISO: Isolation cell fails OFF to ON check. ISO supply net is off too.
   CROSSING_OFF_TO_ON_LSH: Level shifter cell fails OFF to ON check. LS supply net is off too.
@@ -14,3 +14,8 @@ CLP
   connect_supply_net setting may be needed for these supply pins to drive the implementation and analysis.
   a.internal power: use current scope net.
   b.external power: use set_quivalent -nets, through pad.
+
+Power Anlysis:
+1.Voltage is very important, current depend on capacity. We specify supply voltage srouce max current. res = wire res + instance res. If we apply coltage as instance require, normally it's will not overload.But if
+  wire res too high, the instance voltage will drop. For example, one reg not ff, instance res is ulimit, so current is too slow. But if it ff, instance res is slow, and current will bigger and through instance. But
+  the voltage source is contant.
