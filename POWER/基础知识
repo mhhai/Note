@@ -14,8 +14,12 @@ CLP:
   connect_supply_net setting may be needed for these supply pins to drive the implementation and analysis.
   a.internal power: use current scope net.
   b.external power: use set_quivalent -nets, through pad.
+5.Level Shifter no need control signal.
 
 Power Anlysis:
 1.Voltage is very important, current depend on capacity. We specify supply voltage srouce max current. res = wire res + instance res. If we apply coltage as instance require, normally it's will not overload.But if
   wire res too high, the instance voltage will drop. For example, one reg not ff, instance res is ulimit, so current is too slow. But if it ff, instance res is slow, and current will bigger and through instance. But
   the voltage source is contant.
+
+Others:
+芯片里面的地由于PAD寄生，bonding寄生电容电感，地不是那么强，特别是对于数字域来说，你想想数字里面全是时钟信号翻来翻去，那么快的瞬态变化，地没法完全吸收这些高频变化，导致地电位上很多小毛刺，这些小毛刺如果通过地线耦合到频率相对较低、抗躁较弱的模拟电路中会严重影响模拟电路的性能，所以数字地不干净，模拟电路要远离它，数字电源同理。
