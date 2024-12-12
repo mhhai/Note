@@ -4,5 +4,8 @@
   的最大行数。
 4.for index, grocery in enumerate(groceries): or
   for index, grocery in groceries:
+5.re.compile('VDD')
+  a.search(pg_value) or
+  re.match('VDD', pg_value)
 
 
