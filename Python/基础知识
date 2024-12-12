@@ -2,3 +2,7 @@
 2.importlib.reload(module): 重新加载之前导入的 module。那个参数必须是一个模块对象，所以它之前必须已经成功导入了。
 3.默认情况下，pandas 是不超出屏幕的显示范围的，如果表的行数很多，它会截断中间的行只显示一部分。我们可以通过设置display.max_rows来控制显示
   的最大行数。
+4.for index, grocery in enumerate(groceries): or
+  for index, grocery in groceries:
+
+
