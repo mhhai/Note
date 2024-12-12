@@ -7,5 +7,7 @@
 5.re.compile('VDD')
   a.search(pg_value) or
   re.match('VDD', pg_value)
+6./ 除法
+  //整除
 
 
