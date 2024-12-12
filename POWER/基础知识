@@ -1,3 +1,10 @@
+UPF:
+1.add_port_state (legacy):The add_supply_state command is a generalization of add_port_state; add_supply_state can be used to define named supply states for supply ports, supply nets, and supply set functions.
+  The state name can be arbitrary. If a voltage is specified, the supply net state is FULL_ON and the voltage value is the specified value; otherwise if off is specified, the supply net state is OFF.
+  The state value can be multi, splited by space.
+2.
+
+
 CLP:
 1.If you didn’t change the default rule set, tool will automatically adjust the rule check. If the rule is not applicable for the current design, tool will not run it. 
 2.CROSSING_OFF_TO_ON_ISO: Isolation cell fails OFF to ON check. ISO supply net is off too.
@@ -22,4 +29,6 @@ Power Anlysis:
   the voltage source is contant.
 
 Others:
-芯片里面的地由于PAD寄生，bonding寄生电容电感，地不是那么强，特别是对于数字域来说，你想想数字里面全是时钟信号翻来翻去，那么快的瞬态变化，地没法完全吸收这些高频变化，导致地电位上很多小毛刺，这些小毛刺如果通过地线耦合到频率相对较低、抗躁较弱的模拟电路中会严重影响模拟电路的性能，所以数字地不干净，模拟电路要远离它，数字电源同理。
+芯片里面的地由于PAD寄生，bonding寄生电容电感，地不是那么强，特别是对于数字域来说，你想想数字里面全是时钟信号翻来翻去，那么快的瞬态变化，地没法完全吸收这些高频变化，导致地电位上很多小毛刺，这些小毛刺如果通过地线耦合到频率相对较低、抗躁
+较弱的模拟电路中会严重影响模拟电路的性能，所以数字地不干净，模拟电路要远离它，数字电源同理。
+
