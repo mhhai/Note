@@ -9,5 +9,7 @@
   re.match('VDD', pg_value)
 6./ 除法
   //整除
+7. Use type() function can query one variable type.
+8.
 
 
