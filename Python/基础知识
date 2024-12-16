@@ -13,5 +13,7 @@
 8.regexp
   a. ?: pattern is selectable. If not, it will also be considered a match.
   b. |: tupple.
+  c. *: match before.
+  d. .: match any.
 
 
