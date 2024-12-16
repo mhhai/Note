@@ -2,7 +2,14 @@ UPF:
 1.add_port_state (legacy):The add_supply_state command is a generalization of add_port_state; add_supply_state can be used to define named supply states for supply ports, supply nets, and supply set functions.
   The state name can be arbitrary. If a voltage is specified, the supply net state is FULL_ON and the voltage value is the specified value; otherwise if off is specified, the supply net state is OFF.
   The state value can be multi, splited by space.
-2.
+2.create_supply_set:
+  When -function is specified, func_name shall be one of the following: power, ground, nwell, pwell, deepnwell, and deeppwell. The -function option associates the specified func_name of this supply set with
+  the specified supply_net_name. If the same func_name is associated with two different supply nets, it shall be an error if those supply nets are not the same. The supply_net_name may be a reference to a supply net
+  in the descendant hierarchy of the current scope using a supply net handle.
+3.Both create_supply_port and create_supply_net has -domain option.
+  create_supply_net -reuse: Extend availability of a supply net previously defined for another domain for use in the extent of this domain.
+  create_supply_set -update: Use -update if the set_name has already been defined.
+4.power state name = supply set_name or power domain name
 
 
 CLP:
