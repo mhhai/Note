@@ -15,5 +15,7 @@
   b. |: tupple.
   c. *: match before.
   d. .: match any.
+  e. \w: any char, dig or _
+  f. \d: 0~9
 
 
