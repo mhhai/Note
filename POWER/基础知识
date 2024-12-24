@@ -40,7 +40,7 @@ CLP:
   Such state will be ignored by the tool when analyzing consistent states for level shifter insertion or for any power state-related rule checks.
   When a dropped root level state is of a supply set object, it will be reported in another rule 1801_PST_STATE_DROPPED_ROOT_SUPPLY_SET_STATE with default severity warning.
   1801_PST_STATE_DROPPED_ROOT_SUPPLY_SET_STATE:
-  supply_set.state not used.
+  supply_set.state not used. Final power state should include all supply set state.
 
 Power Anlysis:
 1.Voltage is very important, current depend on capacity. We specify supply voltage srouce max current. res = wire res + instance res. If we apply coltage as instance require, normally it's will not overload.But if
