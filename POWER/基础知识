@@ -36,7 +36,7 @@ CLP:
           add_power_state PD2 -state {ON_SAME -logic_expr {SSet1==ON10 && SSet2==ON10}}
   Rule 1801_PST_STATE_DROPPED_ROOT will be reported on state PD1.ON_DIFF, and another rule 1801_PST_STATE_DROPPED_ROOT_SUPPLY_SET_STATE will be reported on state SSet2.ON12.
   If add_power_state PD3 -state {ON_SAME -logic_expr {SSet1==ON10}}, report 1801_PST_STATE_DROPPED_ROOT too.
-  Reported when any power state defined at the root level is inconsistent with every state of any other PST, supply set, and power domain.
+  Reported when any power state defined at the root level is inconsistent with every state of any other PST, supply set, and power domain. Every means power domain state should include all supply_set state.
   Such state will be ignored by the tool when analyzing consistent states for level shifter insertion or for any power state-related rule checks.
   When a dropped root level state is of a supply set object, it will be reported in another rule 1801_PST_STATE_DROPPED_ROOT_SUPPLY_SET_STATE with default severity warning.
   1801_PST_STATE_DROPPED_ROOT_SUPPLY_SET_STATE:
