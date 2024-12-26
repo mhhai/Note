@@ -46,6 +46,10 @@ CLP:
   Connected supply signals in the same pst state should be at the same voltage. This will cause power state drop.
 9.[1801_LINT_OPT_MISSING_REQUIRED] create_supply_net: Missing required option: Supply net '*' was not originally created with option '-domain', therefore it cannot be reused.
   Supply_net can't be created twice.
+10.CROSSING_VOLTAGE_CONFLICT_NOLSH：
+  Signal driver and receiver have incompatible voltages.Reports a cell-to-cell path segment (without any level shifter instance at this segment) such that the driver's related supply and the receiver's related 
+  supply power (or ground) functions do not have the same single root supply driver, and in some globally consistent power state they can be ON at different voltages.
+  related power state.
 
 Power Anlysis:
 1.Voltage is very important, current depend on capacity. We specify supply voltage srouce max current. res = wire res + instance res. If we apply coltage as instance require, normally it's will not overload.But if
