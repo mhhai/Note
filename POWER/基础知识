@@ -58,6 +58,9 @@ CLP:
    Supply set for a logic pin of low power or macro cell cannot be determined.
    Indicates that the related supply set cannot be determined for a logic pin of leaf cell. The related supply set for a pin is determined either using related pg pins and physical supply connections (physical cells)
    or using explicit or implicit connections specified by power intent (logical cells). This rule is checked for low power cells and macro cells.
+12.PG_CONN_NON_SOURCE_DRIVE_SUPPLY:
+   Instance pin not defined as supply source is driving a supply net.
+   Reported when an instance output or inout pin that is not defined as a supply source is driving a supply net.
 
 Power Anlysis:
 1.Voltage is very important, current depend on capacity. We specify supply voltage srouce max current. res = wire res + instance res. If we apply coltage as instance require, normally it's will not overload.But if
