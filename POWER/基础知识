@@ -31,6 +31,10 @@ CLP:
 5.Level Shifter no control signal, if OFF domain OFF, what LS will happend?
 6.1801_SUPPLY_PG_PIN_CONFLICT:
   (Critical) Supply net connects to instance pin of different type (power versus ground). Tool will not run rule check if this happpend.
+  PG_CONN_SUPPLY_PIN_CSN_CONFLICT：
+   Instance supply pin connection conflicts with the power intent supply connection setting.
+   Reported when a connect_supply_net is used in the power intent to connect a supply net to a port that has already been connected to a different, non-equivalent supply net. The existing connection could be
+   either a connection in the design or a connection created by a later connect_supply_net command in the power intent. In this situation, the tool will obey the existing connection for analysis.
 7.1801_PST_STATE_DROPPED_ROOT:
   example:add_power_state PD1 -state {ON_SAME -logic_expr {SSet1==ON10 && SSet2==ON10}} -state {ON_DIFF -logic_expr {SSet1==ON10 && SSet2==ON12}}
           add_power_state PD2 -state {ON_SAME -logic_expr {SSet1==ON10 && SSet2==ON10}}
