@@ -61,6 +61,26 @@ CLP:
 12.PG_CONN_NON_SOURCE_DRIVE_SUPPLY:
    Instance pin not defined as supply source is driving a supply net.
    Reported when an instance output or inout pin that is not defined as a supply source is driving a supply net.
+13.ISO_REDUNDANT:
+   Use -exclude or set_repeater
+14.ISO_CLAMP_VALUE_TOGGLE_STATE:
+  An isolation cell can drive the state element clock, set, or reset pin when the isolation clamp value does not trigger the clock, set, or reset. 
+  The required clamp value to isolate clock, set, reset pin is determined in the following order of precedence:
+  When the clamp value of the sequential cell's clock, set, or reset pin is specified in the power intent using 'set_port_attribute -model <model_name> 
+  -ports <pin_name> -clamp_value <val>', the clamp value of the isolation cell output must be consistent with that clamp value. The clamp value specified 
+  can be 0 or 1.
+  When the sequential cell has a 'retention_cell' attribute in library and the clock pin has 'retention_pin' attribute and the value of "save_restore" is 
+  specified, the clamp value of the isolation cell output is LOW when value "save_restore" is  1 and HIGH when value "save_restore" is 0.
+  When the clamp value of the sequential cell's clock, set, or reset pin is not specified in the power intent, the expected clamp value of the isolation 
+  cell output is LOW for active-high pins and posi-tive edge triggered state elements and HIGH for active-low pins and negative edge triggered state elements.
+  A violation is reported when the isolation cell's output clamp value does not meet the required clamp value.
+  The clamp value takes into account the inverters placed between the real isolation cell's output to the sequential cell's clock, set, or reset pins.
+  Check the design.
+15.1801: UPF issues. Others: design issues.
+16:Analog:
+  ANALOG_DIFFERENT_VOLTAGE: analog to analog path: no LS.
+  ANALOG_OFF_TO_ON: analog to analog path: no ISO.
+  ANALOG_DIGITAL_CONN: between analog and non-analog port, use set_port_attribute. 
 VCS:
  1.UPF_STATE_FIRST_USE: domain -update should used in last.
 Power Anlysis:
