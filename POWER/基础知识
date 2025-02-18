@@ -77,10 +77,14 @@ CLP:
   The clamp value takes into account the inverters placed between the real isolation cell's output to the sequential cell's clock, set, or reset pins.
   Check the design.
 15.1801: UPF issues. Others: design issues.
-16:Analog:
+16.Analog:
   ANALOG_DIFFERENT_VOLTAGE: analog to analog path: no LS.
   ANALOG_OFF_TO_ON: analog to analog path: no ISO.
   ANALOG_DIGITAL_CONN: between analog and non-analog port, use set_port_attribute. 
+17.STRATEGY_ISO/LS_MAP_CONFLICT:
+  Indicates that an isolation cell specified by map_isolation_cell or use_interface_cell, is different than the library cell used to implement the low power cell in the design.
+  If not specify ISO/LS lib cell, synthesis will use syn lib. 
+
 VCS:
  1.UPF_STATE_FIRST_USE: domain -update should used in last.
 Power Anlysis:
