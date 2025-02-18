@@ -84,6 +84,9 @@ CLP:
 17.STRATEGY_ISO/LS_MAP_CONFLICT:
   Indicates that an isolation cell specified by map_isolation_cell or use_interface_cell, is different than the library cell used to implement the low power cell in the design.
   If not specify ISO/LS lib cell, synthesis will use syn lib. 
+18.ISO_NO_MATCHING_STRATEGY:
+  Isolation cells are expected to be inserted at the domain interface ports by default.Isolation cell does not match any isolation strategy.
+  Use combo cell, but only has LS strategy.
 
 VCS:
  1.UPF_STATE_FIRST_USE: domain -update should used in last.
